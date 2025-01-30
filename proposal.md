@@ -37,8 +37,8 @@ When a user says: anything where the first letter is like a few letters so its n
 My bot will respond by:
 repeating the messedge back to them and then saying use pwoper gramer (that was not a mistake) 
 
-When a user says:
-My bot will respond by:
+When a user says: anything containing the charecters of the word shrimp
+My bot will respond by: saying shrimp
 
 When a user says:
 My bot will respond by:
