@@ -3,7 +3,7 @@
 When a user says: anything containing run
 My bot will respond by: The FitnessGram Pacer Test is a multistage aerobic capacity test that progressively gets more difficult as it continues. The 20 meter pacer test will begin in 30 seconds. Line up at the start. The running speed starts slowly, but gets faster each minute after you hear this signal. [beep] A single lap should be completed each time you hear this sound. [ding] Remember to run in a straight line, and run as long as possible. The second time you fail to complete a lap before the sound, your test is over. The test will begin on the word start. On your mark, get ready, start.
 
-When a user says: random
+When a user says: give me something random
 My bot will respond by: with a few options
 "play wynncraft"
 "play skyblock" 
@@ -40,7 +40,7 @@ repeating the messedge back to them and then saying use pwoper gramer (that was 
 When a user says: anything containing the charecters of the word shrimp
 My bot will respond by: saying shrimp
 
-When a user says:
+When a user says: 
 My bot will respond by:
 
 When a user says:
