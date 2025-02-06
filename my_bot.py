@@ -22,6 +22,8 @@ def should_i_respond(user_message, user_name):
     return True
   elif "s"  in user_message and "h" in user_message and "r" in user_message and "i" in user_message and "m" in user_message and "p" in user_message:
     return True
+  elif "bye robot" in user_message:
+    return True
   else:
     return False
 
@@ -43,6 +45,8 @@ def respond(user_message, user_name):
   elif "give me something random" in user_message:
     random.choice(["play wynncraft", "play skybloc", "run a mile", "do 20 pushups", random.randint(1, 1023402)])
   elif "s"  in user_message and "h" in user_message and "r" in user_message and "i" in user_message and "m" in user_message and "p" in user_message:
-    return "shrimp"    
+    return "shrimp"
+  elif "bye robot" in user_message:
+    return "I aint going nowhere" 
   else:
     pass
