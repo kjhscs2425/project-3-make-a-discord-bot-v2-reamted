@@ -83,7 +83,6 @@ def should_i_respond(user_message, user_name):
   elif "yea" in user_message:
     return True
   elif "yap" in user_message:
-     state = "counter"
      return True
   elif "m" in user_message and "o" in user_message and "n" in user_message and "k" in user_message and "e" in user_message and "y" in user_message:
      return True
