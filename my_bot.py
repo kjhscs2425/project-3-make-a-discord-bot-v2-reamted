@@ -1,7 +1,58 @@
 import random
 import string
+import re
 
 alphabet = string.ascii_lowercase
+
+
+
+
+
+consonants = 'b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 's', 't', 'v', 'w', 'x', 'z'
+
+exeptions = "he", "she", "me", "be", "the", "we", 
+
+def syllable_bot(user_message):
+    #remove all punctuation
+    text = user_message.lower()
+    text = re.sub(r'[^\w\s]','', text) # replace all non white space non text with a empty string
+    total = 0
+    words = text.split()
+    #print(words)
+    for word in words:
+        #figuring out if something actually is a haiku
+        number = 0
+        #line detector
+        sylable = 0
+          
+        print(word)
+        if word in exeptions:
+            sylable = 1
+        else:
+            #throw away silent e
+            if word[-1] == 'e':
+                word = word[:-1]
+            #pad with a d
+            word += 'd'
+            #replace all constonants with d    
+            for consonant in consonants:
+                word = word.replace(consonant, 'd')
+            #count vowel d's
+            sylable += word.count("ad") + word.count("ed") + word.count("id") + word.count("od") + word.count("ud") + word.count("yd")
+        #print(sylable)
+        total += sylable
+    return str(total)
+
+
+
+
+state = "normal"
+
+
+
+
+
+
 
 """
 
@@ -14,6 +65,7 @@ This function will be called every time anyone says anything on a channel where 
 * You can have the bot respond differently to different users
 """
 def should_i_respond(user_message, user_name):
+  global state
   if "robot" in user_message:
     return True
   elif "run" in user_message:
@@ -24,6 +76,15 @@ def should_i_respond(user_message, user_name):
     return True
   elif "bye robot" in user_message:
     return True
+  elif "syllable counter" in user_message:
+    return True
+  elif "yea" in user_message:
+    return True
+  elif "yap" in user_message:
+     state = "counter"
+     return True
+  elif state == "counter":
+     return True
   else:
     return False
 
@@ -37,6 +98,7 @@ This function will be called every time the `should_i_respond` function returns 
 * You can have the bot respond differently to different messages and users
 """
 def respond(user_message, user_name):
+  global state
   if "robot" in user_message:
     return f"""what do you think i am, some actaully competent AI, naaa you got the wish.com bot version bro
     {user_message.replace("robot", user_name)}"""
@@ -48,5 +110,18 @@ def respond(user_message, user_name):
     return "shrimp"
   elif "bye robot" in user_message:
     return "I aint going nowhere" 
+  elif "syllable counter" in user_message:
+     print("ok")
+     state = "counter"
+     user_message = input()
+  elif "yea" in user_message:
+     return "YHEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+  elif "yap" in user_message:
+     return '''Twas rizzly, and the skibidi toes \n
+        Did fanum tax and scroll YouTube shorts in the condors: 
+      All chinsy were the gopals,
+        And played Brawl Stars indoors.'''
+  elif state == "counter":
+     syllable_bot(user_message)
   else:
     pass
