@@ -111,9 +111,9 @@ def respond(user_message, user_name):
   elif "bye robot" in user_message:
     return "I aint going nowhere" 
   elif "syllable counter" in user_message:
-     print("ok")
      state = "counter"
-     user_message = input()
+     return "what do you want me to count"
+     
   elif "yea" in user_message:
      return "YHEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
   elif "yap" in user_message:
@@ -122,6 +122,6 @@ def respond(user_message, user_name):
       All chinsy were the gopals,
         And played Brawl Stars indoors.'''
   elif state == "counter":
-     syllable_bot(user_message)
+     return syllable_bot(user_message)
   else:
     pass
