@@ -131,7 +131,7 @@ def respond(user_message, user_name):
   elif "yea" in user_message:
      return "YHEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
   elif "yap" in user_message:
-     return '''Twas rizzly, and the skibidi toes \n
+     return '''Twas rizzly, and the skibidi toes
         Did fanum tax and scroll YouTube shorts in the condors: 
       All chinsy were the gopals,
         And played Brawl Stars indoors.'''
