@@ -54,27 +54,7 @@ def haiku_bot(text):
         number = 0
         #line detector
         sylable = 0
-        #line one detector
-        if sylable == 5 and sylable == 0:
-            sylable += 1
-            number += 1
-            print(1)
-        #checking if line one has the correct amount of sylables
-        elif sylable > 5 and sylable == 0:
-            print("fail")
-            break
-        #line two detector
-        elif number == 1 and sylable == 7:
-            sylable += 1
-            number += 1
-        #cheking if line two has the correct amount of sylables
-        elif sylable > 7 and sylable ==1:
-            print("fail")
-            break
-        #compleation detector
-        elif number == 2 and sylable == 5:
-            print("this is a haiku")
-            break
+        
         
         
         print(word)
@@ -184,4 +164,4 @@ def word_spilter(text):
 
 
 
-testing_bot("I can detect your accidental haikus and format them in lines")
+haiku_bot("i hate the french")
