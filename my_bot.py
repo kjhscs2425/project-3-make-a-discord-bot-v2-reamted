@@ -72,7 +72,7 @@ def should_i_respond(user_message, user_name):
      return True
   elif "run" in user_message:
     return True
-  elif "give me something random" in user_message:
+  elif "random" in user_message:
     return True
   elif "s"  in user_message and "h" in user_message and "r" in user_message and "i" in user_message and "m" in user_message and "p" in user_message:
     return True
@@ -86,6 +86,8 @@ def should_i_respond(user_message, user_name):
      state = "counter"
      return True
   elif "m" in user_message and "o" in user_message and "n" in user_message and "k" in user_message and "e" in user_message and "y" in user_message:
+     return True
+  elif "im going" in user_message:
      return True
   else:
     return False
@@ -107,10 +109,14 @@ def respond(user_message, user_name):
   elif state == "counter":
      state = "normal"
      return syllable_bot(user_message)
-  
+  elif "im going" in user_message:
+     return '''you have my sword, and my bow, AND MY AXE
+     
+     
+     is that copywrited, idk, im just a highschool studen man, can deal with this'''
   elif "run" in user_message:
     return "The FitnessGram Pacer Test is a multistage aerobic capacity test that progressively gets more difficult as it continues. The 20 meter pacer test will begin in 30 seconds. Line up at the start. The running speed starts slowly, but gets faster each minute after you hear this signal. [beep] A single lap should be completed each time you hear this sound. [ding] Remember to run in a straight line, and run as long as possible. The second time you fail to complete a lap before the sound, your test is over. The test will begin on the word start. On your mark, get ready, start."
-  elif "give me something random" in user_message:
+  elif "random" in user_message:
     random.choice(["play wynncraft", "play skybloc", "run a mile", "do 20 pushups", random.randint(1, 1023402)])
   elif "m" in user_message and "o" in user_message and "n" in user_message and "k" in user_message and "e" in user_message and "y" in user_message:
      return "monkey"
